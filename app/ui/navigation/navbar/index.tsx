@@ -1,7 +1,7 @@
 import React, { useState, useEffect } from "react";
 import Link from "next/link";
 import MenuIcon from "@mui/icons-material/Menu";
-import HomeIcon from "@mui/icons-material/Home";
+import RestaurantIcon from '@mui/icons-material/Restaurant';
 import { Links } from "@/app/types";
 import NavItem from "../navItems";
 
@@ -40,19 +40,19 @@ const Navbar: React.FC<NavBarProps> = ({ links, isOpen, toggle }) => {
         <div className="w-full px-6 h-full flex justify-between items-center">
           {/* Home Button */}
           <Link href="/">
-            <HomeIcon className="text-gray-500 hover:text-black transition-colors duration-300 text-3xl" />
+            <RestaurantIcon className="text-gray-500 hover:text-black transition-colors duration-300 text-3xl" />
           </Link>
 
           {/* Nav Links (Desktop) */}
           <ul className="hidden md:flex w-full items-center">
             <div className="flex justify-center w-full gap-x-16">
                 {links.links
-                .filter((link) => link !== "/contact")
+                .filter((link) => link !== "/location")
                 .map((link) => (
                     <NavItem key={link} link={link} />
                 ))}
             </div>
-            <NavItem link="/contact" />
+            <NavItem link="/location" />
             </ul>
 
           {/* Hamburger Menu (Mobile) */}
