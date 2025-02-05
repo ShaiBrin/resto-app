@@ -1,6 +1,7 @@
 import type { Metadata } from "next";
 import "./globals.css";
 import Navigation from "./ui/navigation";
+import Footer from "./ui/footer";
 
 export const metadata: Metadata = {
   title: "Ghalib's Restaurant",
@@ -18,7 +19,7 @@ export default function RootLayout({
         <div className="w-full pl-5">
           <Navigation/>
         </div>
-        <div className="pt-24 pb-20"> 
+        <div> 
           {children}
         </div>
       </body>

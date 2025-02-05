@@ -25,7 +25,7 @@ const NavItem: React.FC<NavLinkProps> = ({ link, toggle }) => {
         return <DinnerDiningIcon style={{ color: pathname === link ? "blue" : "inherit" }} />;
       case "/ship":
         return <LocalShippingIcon style={{ color: pathname === link ? "gray" : "inherit" }} />;
-      case "/contact":
+      case "/location":
         return <LocationOnIcon style={{ color: pathname === link ? "gray" : "inherit" }} />;
       default:
         return null;
@@ -33,7 +33,7 @@ const NavItem: React.FC<NavLinkProps> = ({ link, toggle }) => {
   };
 
   return (
-    <li className={link === "/contact" ? "ml-auto" : ""}>
+    <li className={link === "/location" ? "ml-auto" : ""}>
       <Link href={link} onClick={toggle ? () => toggle() : undefined}>
         <div className="flex items-center gap-x-2">
           {/* Render the icon with the correct color */}
