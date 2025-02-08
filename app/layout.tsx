@@ -4,7 +4,7 @@ import Navigation from "./ui/navigation";
 import Footer from "./ui/footer";
 
 export const metadata: Metadata = {
-  title: "Ghalib's Restaurant",
+  title: "JAGY's SMOKEHOUSE BBQ & GRILLADE",
   description: "BBQ Restaurant",
 };
 
