@@ -1,3 +1,4 @@
 {
-    "links": ["/","/menu","/catering","/ship","/location"]
+    "mainlinks": ["/","/menu","/catering","/ship","/location"],
+    "minilinks": ["/about","/faqs","/news","/careers","/contact"]
 }

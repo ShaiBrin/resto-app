@@ -12,7 +12,7 @@ const Navigation = () => {
   };
   return (
     <>
-      <Navbar links={links as Links}  isOpen={isOpen} toggle={toggle} />
+      <Navbar links={links as Links}   isOpen={isOpen} toggle={toggle} />
     </>
   );
 };
