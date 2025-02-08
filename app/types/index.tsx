@@ -1,3 +1,4 @@
 export interface Links {
-    links:string[]
+    links: string[];
 }
+  
