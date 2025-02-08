@@ -1,6 +1,6 @@
 import React from "react";
 
-const BBQVideo = () => {
+const HomePage = () => {
   return (
     <div className="relative w-full h-screen">
       <video
@@ -20,4 +20,4 @@ const BBQVideo = () => {
   );
 };
 
-export default BBQVideo;
+export default HomePage;
