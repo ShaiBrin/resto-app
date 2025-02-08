@@ -13,7 +13,7 @@ interface NavBarProps {
 
 const Navbar: React.FC<NavBarProps> = ({ links, isOpen, toggle }) => {
   const [isMobile, setIsMobile] = useState(false);
-
+  const title = "JAGY's SMOKEHOUSE BBQ & GRILLADE";
   useEffect(() => {
     const handleResize = () => {
       setIsMobile(window.innerWidth < 768);
@@ -39,21 +39,26 @@ const Navbar: React.FC<NavBarProps> = ({ links, isOpen, toggle }) => {
       <div className="w-full h-20 text-black font-sans">
         <div className="w-full px-6 h-full flex justify-between items-center">
           {/* Home Button */}
-          <Link href="/">
-            <RestaurantIcon className="text-gray-500 hover:text-black transition-colors duration-300 text-3xl" />
-          </Link>
-
+          <div className="ml-20 flex items-center gap-10">
+            <Link href="/">
+              <RestaurantIcon className="text-gray-500 hover:text-black transition-colors duration-300 text-3xl" />
+            </Link>
+          </div>
+          <div className="ml-5">
+          {/* Title */} 
+          <span className="text-xl font-bold text-gray-700">{title}</span>
+          </div>
           {/* Nav Links (Desktop) */}
           <ul className="hidden md:flex w-full items-center">
             <div className="flex justify-center w-full gap-x-16">
-                {links.links
+              {links.links
                 .filter((link) => link !== "/location")
                 .map((link) => (
-                    <NavItem key={link} link={link} />
+                  <NavItem key={link} link={link} />
                 ))}
             </div>
             <NavItem link="/location" />
-            </ul>
+          </ul>
 
           {/* Hamburger Menu (Mobile) */}
           {isMobile && (
