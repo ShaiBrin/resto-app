@@ -1,4 +1,5 @@
 export interface Links {
-    links: string[];
+    mainlinks: string[];
+    minilinks: string[];
 }
   

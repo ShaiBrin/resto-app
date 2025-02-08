@@ -1,7 +1,6 @@
 import React, { useState, useEffect } from "react";
 import Link from "next/link";
 import MenuIcon from "@mui/icons-material/Menu";
-import RestaurantIcon from "@mui/icons-material/Restaurant";
 import { Links } from "@/app/types";
 import NavItem from "../navItems";
 
@@ -41,7 +40,7 @@ const Navbar: React.FC<NavBarProps> = ({ links, isOpen, toggle }) => {
     <>
       {/* Mini Navbar */}
       <div
-          className={`fixed top-0 left-0 w-full bg-gray-900 text-white text-sm py-2 px-6 flex justify-center z-50 transition-all duration-500 ${
+          className={`fixed top-0 left-0 w-full bg-gray-900 text-black text-sm py-2 px-6 flex justify-center z-50 transition-all duration-500 ${
             showMiniNavbar ? "opacity-100 h-10" : "opacity-0 h-0 pointer-events-none"
           }`}
           style={{
@@ -49,9 +48,9 @@ const Navbar: React.FC<NavBarProps> = ({ links, isOpen, toggle }) => {
           }}
         >
             {/* Nav Links (Desktop) */}
-            <ul className="hidden md:flex w-full items-center pl-80">
-              <div className="flex justify-end w-full gap-x-16">
-                {links.links
+            <ul className="hidden md:flex w-full items-center">
+              <div className="flex justify-end w-full gap-x-10">
+                {links.minilinks
                   .filter((link) => link !== "/location")
                   .map((link) => (
                     <NavItem key={link} link={link} />
@@ -75,15 +74,14 @@ const Navbar: React.FC<NavBarProps> = ({ links, isOpen, toggle }) => {
             {/* Home Button */}
             <div className="ml-20 flex items-center gap-4">
               <Link href="/">
-                <RestaurantIcon className="text-gray-500 hover:text-black transition-colors duration-300 text-3xl" />
-              </Link>
               <span className="text-xl font-bold text-gray-700">{title}</span>
+              </Link>
             </div>
 
             {/* Nav Links (Desktop) */}
             <ul className="hidden md:flex w-full items-center">
               <div className="flex justify-center w-full gap-x-16">
-                {links.links
+                {links.mainlinks
                   .filter((link) => link !== "/location")
                   .map((link) => (
                     <NavItem key={link} link={link} />
