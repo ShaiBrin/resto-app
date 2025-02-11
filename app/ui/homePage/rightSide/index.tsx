@@ -12,14 +12,13 @@ const RightSide = React.memo(({ selectedCategory }: RightSideProps) => {
 
   return (
     <div className="w-3/4 px-6">
-      <h2 className="text-xl font-bold text-gray-800 mb-4">{selectedCategory}</h2>
       <ul className="space-y-4">
         {selectedItems.length > 0 ? (
           selectedItems.map((item, index) => (
-            <li key={index} className="p-4 bg-gray-100 rounded-md shadow-md">
-              <h3 className="text-lg font-semibold">{item.name}</h3>
-              <p className="text-gray-600">{item.description}</p>
-              <p className="text-lg font-semibold text-gray-800 mt-2">Price: ${item.price}</p>
+            <li key={index} className="p-4">
+              <h3 className="text-lg pb-2 font-semibold">{item.name}</h3>
+              <p className="text-white pb-4">{item.description}</p>
+              <p className="text-lg font-semibold text-white mt-2">Price: ${item.price}</p>
             </li>
           ))
         ) : (

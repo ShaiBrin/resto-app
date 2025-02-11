@@ -199,6 +199,71 @@
             "description": "Golden crispy fries | Rich and smooth gravy | Melted cheese curds | Tossed with cajun seasoning"
           }
         ]
+      },
+      {
+        "type": "DESSERTS",
+        "items": [
+          {
+            "name": "STRAWBERRY CHEESECAKE",
+            "price": "7.99$",
+            "description": "Silky | Creamy | Strawberry cheesecake | Resting on a buttery graham cracker crust | Crowned with juicy and sun-ripened strawberries | Finished with a luscious strawberry drizzle"
+          },
+          {
+            "name": "MANGO DELIGHT",
+            "price": "5.99$",
+            "description": "Soft | Fluffy | Rich mango jelly spread for a burst of tropical sweetness"
+          },
+          {
+            "name": "PIZOOKIE",
+            "price": "9.99$",
+            "description": "Warm | Gooey | Chocolate chip cookie | Baked to perfection in a skillet | Topped with creamy vanilla ice cream for the ultimate indulgence"
+          }
+        ]
+      },
+      {
+        "type": "DRINKS",
+        "items": [
+          {
+            "name": "SOFT DRINK CANS",
+            "price": "1,75$",
+            "description": ""
+          },
+          {
+            "name": "MALT BEVERAGES",
+            "price": "4,99$",
+            "description": ""
+          },
+          {
+            "name": "2 LITER SODA",
+            "price": "4,99$",
+            "description": ""
+          },
+          {
+            "name": "EXOTIC DRINKS",
+            "price": "5,75$",
+            "description": ""
+          },
+          {
+            "name": "JARITOS",
+            "price": "4,99$",
+            "description": ""
+          },
+          {
+            "name": "PERRIER",
+            "price": "3,99$",
+            "description": ""
+          },
+          {
+            "name": "JUICES",
+            "price": "3,75$",
+            "description": ""
+          },
+          {
+            "name": "TYMBARK",
+            "price": "4.99$",
+            "description": ""
+          }
+        ]
       }
     ]
   }

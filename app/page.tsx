@@ -16,7 +16,7 @@ export default function Home() {
       </div>
 
       {/* Left and Right Side Layout */}
-      <div className="flex flex-row justify-start gap-x-8 pl-40 px-20 py-10">
+      <div className="flex flex-row justify-start gap-x-8 pl-40 px-20 pt-20">
         <LeftSide setSelectedCategory={setSelectedCategory} />
         <RightSide selectedCategory={selectedCategory} />
       </div>

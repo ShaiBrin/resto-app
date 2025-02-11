@@ -13,11 +13,12 @@ const LeftSide: React.FC<LeftSideProps> = React.memo(({ setSelectedCategory }) =
         {menuData.categories.map((category, index) => (
           <div key={index} className="mb-5">
             <h3 
-              className="text-lg font-semibold cursor-pointer transition duration-200 hover:text-blue-500"
+              className="text-lg font-semibold cursor-pointer transition duration-200 hover:text-white"
               onClick={() => setSelectedCategory(category.type)}
             >
               {category.type}
             </h3>
+            {index === 3 && <hr className="my-4 border-t border-gray-300" />} 
           </div>
         ))}
       </div>

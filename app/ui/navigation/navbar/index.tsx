@@ -40,24 +40,24 @@ const Navbar: React.FC<NavBarProps> = ({ links, isOpen, toggle }) => {
     <>
       {/* Mini Navbar */}
       <div
-          className={`fixed top-0 left-0 w-full bg-gray-900 text-black text-sm py-2 px-6 flex justify-center z-50 transition-all duration-500 ${
-            showMiniNavbar ? "opacity-100 h-10" : "opacity-0 h-0 pointer-events-none"
-          }`}
-          style={{
-            backgroundColor: "rgba(255, 255, 255, 0.9)", // Remove this if you want `bg-gray-900`
-          }}
-        >
-            {/* Nav Links (Desktop) */}
-            <ul className="hidden md:flex w-full items-center">
-              <div className="flex justify-end w-full gap-x-10">
-                {links.minilinks
-                  .filter((link) => link !== "/location")
-                  .map((link) => (
-                    <NavItem key={link} link={link} />
-                  ))}
-              </div>
-            </ul>
-        </div>
+        className={`fixed top-0 left-0 w-full text-black text-sm py-2 px-6 flex justify-center z-50 transition-all duration-500 ${
+          showMiniNavbar ? "opacity-100 h-10" : "opacity-0 h-0 pointer-events-none"
+        }`}
+        style={{
+          backgroundColor: "var(--background-color)", // Using the global background color
+        }}
+      >
+        {/* Nav Links (Desktop) */}
+        <ul className="hidden md:flex w-full items-center">
+          <div className="flex justify-end w-full gap-x-10">
+            {links.minilinks
+              .filter((link) => link !== "/location")
+              .map((link) => (
+                <NavItem key={link} link={link} />
+              ))}
+          </div>
+        </ul>
+      </div>
 
       {/* Main Navbar */}
       <nav
@@ -65,8 +65,8 @@ const Navbar: React.FC<NavBarProps> = ({ links, isOpen, toggle }) => {
           showMiniNavbar ? "top-10" : "top-0"
         }`}
         style={{
-          backgroundColor: "rgba(255, 255, 255, 0.9)",
-          height: "80px", // Keeps the navbar height fixed
+          backgroundColor: "var(--background-color)", 
+          height: "80px", 
         }}
       >
         <div className="w-full h-full text-black font-sans">
@@ -74,7 +74,9 @@ const Navbar: React.FC<NavBarProps> = ({ links, isOpen, toggle }) => {
             {/* Home Button */}
             <div className="ml-20 flex items-center gap-4">
               <Link href="/">
-              <span className="text-xl font-bold text-gray-700">{title}</span>
+                <span className="text-xl font-bold" style={{ color: "var(--primary-color)" }}>
+                  {title}
+                </span>
               </Link>
             </div>
 
