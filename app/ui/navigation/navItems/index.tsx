@@ -2,17 +2,16 @@ import LocalDiningIcon from '@mui/icons-material/LocalDining';
 import DinnerDiningIcon from '@mui/icons-material/DinnerDining';
 import LocalShippingIcon from '@mui/icons-material/LocalShipping';
 import LocationOnIcon from '@mui/icons-material/LocationOn';
-
 import Link from "next/link";
 import { usePathname } from "next/navigation";
-
 
 interface NavLinkProps {
   link: string;
   toggle?: () => void;
+  scrollToMenu?: () => void; // Add the scrollToMenu function as a prop
 }
 
-const NavItem: React.FC<NavLinkProps> = ({ link, toggle }) => {
+const NavItem: React.FC<NavLinkProps> = ({ link, toggle, scrollToMenu }) => {
   const pathname = usePathname();
   const text = link.replace("/", "").charAt(0).toUpperCase() + link.slice(2);
 
@@ -32,9 +31,18 @@ const NavItem: React.FC<NavLinkProps> = ({ link, toggle }) => {
     }
   };
 
+  const handleClick = () => {
+    if (link === "/menu" && scrollToMenu) {
+      scrollToMenu(); // Call the scrollToMenu function when the "Menu" link is clicked
+    }
+    if (toggle) {
+      toggle(); // Toggle the navigation menu if provided
+    }
+  };
+
   return (
     <li className={link === "/location" ? "ml-auto" : ""}>
-      <Link href={link} onClick={toggle ? () => toggle() : undefined}>
+      <Link href={link} onClick={handleClick}>
         <div className="flex items-center gap-x-2">
           {/* Render the icon with the correct color */}
           {getIcon(link)}
