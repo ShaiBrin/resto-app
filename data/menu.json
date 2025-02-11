@@ -1,23 +1,205 @@
 {
     "categories": [
-        
-        {
-            "type": "On the Munch"
-        },
-        {
-            "type": "On the Woods"
-            
-
-            
-        },
-        {
-            "type": "On the Platter"
-            
-
-            
-        },
-        {
-            "type": "Our Signature Sauces"
-        }
+      {
+        "type": "APPETIZERS",
+        "items": [
+          {
+            "name": "SMOKED CHEESE STICKS",
+            "price": "6.99$",
+            "description": "Deep-fried | Smoked cheese sticks | Perfectly crispy on the outside | Melty on the inside"
+          },
+          {
+            "name": "JALAPEÑO POPPERS",
+            "price": "6.99$",
+            "description": "Cream cheese-stuffed jalapeños | Breaded and deep-fried to crispy perfection"
+          },
+          {
+            "name": "MAC N CHEESE BITES",
+            "price": "6.99$",
+            "description": "Golden crispy bites of macaroni and cheese | Cheesy | Creamy | Irresistible"
+          },
+          {
+            "name": "MAC 'N' CHEESE",
+            "price": "8.99$",
+            "description": "Creamy cheddar sauce | Elbow pasta | Freshly melted cheese blend | Topped with crispy breadcrumbs"
+          },
+          {
+            "name": "LOUISIANA BUFFALO CHICKEN WINGS",
+            "price": "12.99$",
+            "description": "Crispy wings | Spicy buffalo sauce | Zesty Louisiana seasoning | Served with cool ranch dip"
+          },
+          {
+            "name": "SMOKED JERK CHICKEN WINGS",
+            "price": "12.99$",
+            "description": "Chicken wings | Famous in-house jerk sauce"
+          },
+          {
+            "name": "CAJUN FRIES",
+            "price": "7.99$",
+            "description": "Crisp golden | Seasoned to perfection | Crunchy outside and fluffy inside in every bite"
+          },
+          {
+            "name": "ONION RINGS",
+            "price": "6.99$",
+            "description": "Crispy | Golden onion rings | Seasoned | Crunchy batter"
+          }
+        ]
+      },
+      {
+        "type": "ON THE WOOD",
+        "items": [
+          {
+            "name": "AAA GRADE HAND CARVED BEEF BACK RIBS",
+            "price": "37.99$ | 69.99$",
+            "description": "Slow-smoked to tender perfection | Glazed with our signature BBQ sauce | A perfect balance of sweet and smoky richness | Caramelized into a sticky, flavorful coating"
+          },
+          {
+            "name": "AAA GRADE HAND CARVED SMOKED BEEF BRISKET",
+            "price": "27.99$",
+            "description": "Slow-smoked to perfection | Exceptionally tender and juicy | Deep, rich smoky flavor | Finished with a caramelized crust"
+          },
+          {
+            "name": "SMOKEY CHICKEN",
+            "price": "17.99$ | 24.99$",
+            "description": "Sweet soy-marinated | Succulent chicken legs | Perfectly seasoned | Slow-cooked over smoldering wood for an irresistible smoky flavor"
+          },
+          {
+            "name": "JERK CHICKEN",
+            "price": "24.99$",
+            "description": "Boneless juicy chicken | Marinated in our bold and zesty blend of authentic Jamaican spices | Kick of heat from Scotch Bonnet peppers | Grilled to smoky perfection"
+          },
+          {
+            "name": "JUICY BIRDS | CHICKEN WINGS",
+            "price": "27.99$",
+            "description": "Marinated in our signature spice blend | Deep-fried to golden perfection | Crispy on the outside | Tender and juicy on the inside | Bursting with flavor"
+          },
+          {
+            "name": "RIBEYE STEAK 12OZ",
+            "price": "43.99$",
+            "description": "Very juicy | Tender 12oz ribeye | Marinated in-house to enhance flavor | Grilled to perfection with a smoky char and melt-in-your-mouth marbling"
+          }
+        ]
+      },
+      {
+        "type": "ON THE PLATTER",
+        "items": [
+          {
+            "name": "FAMILY PLATTER #1",
+            "price": "129.99$",
+            "description": "1 pound of smoked beef brisket | 1 order of smoked beef back ribs (half rack) | 1 grilled chicken leg (thigh + drumstick) | 2 pieces of jerk chicken | 1 pound of juicy wings | Choice of two full-size sides | 1 two liter soda bottle"
+          },
+          {
+            "name": "FAMILY PLATTER #2",
+            "price": "219.99$",
+            "description": "2 pounds of smoked beef brisket | 1 full rack of smoked beef back ribs | 2 grilled chicken legs (thigh + drumstick) | 4 pieces of jerk chicken | 1 pound of juicy wings | 6 pieces of jalapeño poppers | Choice of 3 full-size sides | 2 Two liter soda bottles"
+          }
+        ]
+      },
+      {
+        "type": "OUR SIGNATURE SAUCES",
+        "items": [
+          {
+            "name": "JAGY’s SIGNATURE BBQ SAUCE",
+            "price": "4.99$",
+            "description": "Smoky | Richly sweet | Home-made BBQ sauce with a deep and caramelized flavor"
+          },
+          {
+            "name": "RANCHERO SAUCE",
+            "price": "4.99$",
+            "description": "Smoky | Tangy | Bold | Perfect blend of zesty flavors for a prime ranchero sauce"
+          },
+          {
+            "name": "JERK’ IT UP SAUCE",
+            "price": "4.99$",
+            "description": "Fiery | Aromatic | Home-made jerk sauce with bold spices | Perfect kick of heat"
+          },
+          {
+            "name": "BUFFALO HOT SAUCE",
+            "price": "4.99$",
+            "description": "Tangy | Spicy | Homemade buffalo hot sauce with a bold, fiery kick and a smooth buttery finish"
+          }
+        ]
+      },
+      {
+        "type": "ON THE SIDE",
+        "items": [
+          {
+            "name": "CAESAR SALAD",
+            "price": "6.99$",
+            "description": "Fresh salad tossed in rich Caesar dressing | Finished with crunchy croutons | Shaved parmesan for the perfect balance"
+          },
+          {
+            "name": "CAJUN FRIES",
+            "price": "6.99$",
+            "description": "Crisp golden | Seasoned to perfection | Crunchy outside and fluffy inside in every bite"
+          },
+          {
+            "name": "MASHED POTATOES",
+            "price": "6.99$",
+            "description": "Silky | Creamy mashed potatoes | Buttery and fluffy | Crafted to perfection"
+          },
+          {
+            "name": "CREAMY COLESLAW",
+            "price": "6.99$",
+            "description": "Crisp | Fresh vegetables | Tossed in a creamy, tangy dressing | The perfect refreshing side to any meal"
+          },
+          {
+            "name": "MAC 'N' CHEESE",
+            "price": "6.99$",
+            "description": "Creamy cheddar sauce | Elbow pasta | Freshly melted cheese blend | Topped with crispy breadcrumbs"
+          },
+          {
+            "name": "BBQ SMOKE RICE",
+            "price": "6.99$",
+            "description": "Fluffy | Smoky rice | Infused with rich barbecue flavors"
+          }
+        ]
+      },
+      {
+        "type": "ON THE BUNS",
+        "items": [
+          {
+            "name": "SMOKED MEAT BURGER",
+            "price": "11.99$ | 16.99$ (TRIO)",
+            "description": "Tender smoked meat patty | Grilled to perfection | Melty cheese | Lettuce | Onions | Dill pickles | Topped with our home-smoked brisket | Toasted bun"
+          },
+          {
+            "name": "BRISKET BOMB",
+            "price": "13.99$ | 18.99$ (TRIO)",
+            "description": "Slow-smoked pulled beef brisket | Sweet and smoky BBQ sauce | Melty cheese | Creamy coleslaw | Crispy onions | Dill pickles | Toasted bun"
+          },
+          {
+            "name": "THE JERK'D UP CHICKEN BURGER",
+            "price": "12.99$ | 17.99$ (TRIO)",
+            "description": "Grilled jerk chicken | Spicy marinated seasonings | Creamy coleslaw | Fresh tomatoes | Onions | Signature BBQ sauce | Toasted bun"
+          },
+          {
+            "name": "DOUBLE TROUBLE BURGER",
+            "price": "16.99$ | 21.99$ (TRIO)",
+            "description": "Two juicy AAA grade ground chuck patties | Melty American cheddar | Crispy onion | Fresh lettuce | Sliced tomatoes | Pickles | Spicy jalapeños | Signature sauce | Toasted bun"
+          }
+        ]
+      },
+      {
+        "type": "ON THE FRIES",
+        "items": [
+          {
+            "name": "CLASSIC POUTINE",
+            "price": "11.99$",
+            "description": "Golden crispy fries | Rich and smooth gravy | Melted cheese curds"
+          },
+          {
+            "name": "SMOKED MEAT POUTINE",
+            "price": "16.99$",
+            "description": "Golden crispy fries | Rich and smooth gravy | Melted cheese curds | Topped with tender smoked meat"
+          },
+          {
+            "name": "CAJUN POUTINE",
+            "price": "12.99$",
+            "description": "Golden crispy fries | Rich and smooth gravy | Melted cheese curds | Tossed with cajun seasoning"
+          }
+        ]
+      }
     ]
-}
+  }
+  
