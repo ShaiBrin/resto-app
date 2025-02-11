@@ -1,6 +1,6 @@
 import React from "react";
 
-const HomePage = () => {
+const VideoContent = () => {
   return (
     <div className="relative w-full h-screen">
       <video
@@ -20,4 +20,4 @@ const HomePage = () => {
   );
 };
 
-export default HomePage;
+export default VideoContent;
