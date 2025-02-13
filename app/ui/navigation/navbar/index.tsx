@@ -60,15 +60,13 @@ const Navbar: React.FC<NavBarProps> = ({ links, isOpen, toggle }) => {
       </div>
 
       {/* Main Navbar */}
-      <nav
-        className={`fixed w-full left-0 z-40 transition-all duration-500 ${
-          showMiniNavbar ? "top-10" : "top-0"
-        }`}
-        style={{
-          backgroundColor: "var(--background-color)", 
-          height: "80px", 
-        }}
-      >
+      <nav className={`fixed w-full left-0 z-40 transition-all duration-150 ${showMiniNavbar ? "top-10" : "top-0"}`}
+
+          style={{
+            backgroundColor: "var(--background-color)", 
+            height: "80px", 
+          }}
+        >
         <div className="w-full h-full text-black font-sans">
           <div className="w-full px-6 h-full flex justify-between items-center">
             {/* Home Button */}

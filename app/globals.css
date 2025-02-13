@@ -4,7 +4,7 @@
 
 /* Global styles */
 :root {
-  --primary-color: #a69b20;  /* Earthy Red */
+  --primary-color: #FFD700;  /* Earthy Red */
   --secondary-color: #5C4033; /* Deep Brown */
   --accent-color: #F9A602;  /* Golden Yellow */
   --background-color: #3e2723; /* Creamy Off-White */
@@ -15,11 +15,13 @@
 body {
   font-family: 'Roboto Slab', serif;
   background-color: var(--background-color);
+  background-image: url('/wooden-bg3.jpg');
   color: var(--text-color);
   margin: 0;
   padding: 0;
   line-height: 1.6;
 }
+
 
 h1, h2, h3, h4 {
   font-family: 'Bebas Neue', sans-serif;
