@@ -29,9 +29,6 @@ const Footer = () => {
           <Link href="/about" className="hover:underline">
             About
           </Link>
-          <Link href="/privacy" className="hover:underline">
-            Privacy
-          </Link>
         </div>
       </div>
 
