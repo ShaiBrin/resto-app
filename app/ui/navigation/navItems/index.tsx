@@ -1,14 +1,13 @@
 import LocalDiningIcon from '@mui/icons-material/LocalDining';
 import DinnerDiningIcon from '@mui/icons-material/DinnerDining';
 import LocalShippingIcon from '@mui/icons-material/LocalShipping';
-import LocationOnIcon from '@mui/icons-material/LocationOn';
 import Link from "next/link";
 import { usePathname } from "next/navigation";
 
 interface NavLinkProps {
   link: string;
   toggle?: () => void;
-  scrollToMenu?: () => void; // Add the scrollToMenu function as a prop
+  scrollToMenu?: () => void; 
 }
 
 const NavItem: React.FC<NavLinkProps> = ({ link, toggle, scrollToMenu }) => {
@@ -22,10 +21,8 @@ const NavItem: React.FC<NavLinkProps> = ({ link, toggle, scrollToMenu }) => {
         return <LocalDiningIcon style={{ color: pathname === link ? "orange" : "inherit" }} />;
       case "/catering":
         return <DinnerDiningIcon style={{ color: pathname === link ? "blue" : "inherit" }} />;
-      case "/ship":
+      case "/order":
         return <LocalShippingIcon style={{ color: pathname === link ? "gray" : "inherit" }} />;
-      case "/location":
-        return <LocationOnIcon style={{ color: pathname === link ? "gray" : "inherit" }} />;
       default:
         return null;
     }
@@ -48,7 +45,7 @@ const NavItem: React.FC<NavLinkProps> = ({ link, toggle, scrollToMenu }) => {
           {getIcon(link)}
           <p
             className={`cursor-pointer transition duration-200 ${
-              pathname === link ? "text-black font-bold" : "hover:text-black"
+              pathname === link ? "text-black font-bold" : "hover:text-red"
             }`}
           >
             {text}
