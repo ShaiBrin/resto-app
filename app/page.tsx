@@ -11,10 +11,7 @@ export default function Home() {
 
   return (
     <div className="flex flex-col min-h-screen">
-      <div className='heigh-5px'>
-        <VideoContent /> 
-      </div>
-
+      <VideoContent /> 
       {/* Left and Right Side Layout */}
       <div className="flex flex-row justify-start gap-x-8 pl-40 px-20 pt-20">
         <LeftSide setSelectedCategory={setSelectedCategory} />

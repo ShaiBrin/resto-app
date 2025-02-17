@@ -1,4 +1,4 @@
 {
-    "mainlinks": ["/","/menu","/catering","/order"],
+    "mainlinks": ["/","/specials","/menu","/catering","/location","/order"],
     "footerLinks": ["/about","/faqs","/contact"]
 }
