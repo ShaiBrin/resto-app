@@ -16,6 +16,7 @@ interface NavBarProps {
 
 const Navbar: React.FC<NavBarProps> = ({ links, isOpen, toggle }) => {
   const [isMobile, setIsMobile] = useState(false);
+  const [isScrolled, setIsScrolled] = useState(false);
   const title = "JAGY's SMOKEHOUSE BBQ & GRILLADE";
 
   useEffect(() => {
@@ -23,16 +24,23 @@ const Navbar: React.FC<NavBarProps> = ({ links, isOpen, toggle }) => {
       setIsMobile(window.innerWidth < 768);
     };
 
+    const handleScroll = () => {
+      setIsScrolled(window.scrollY > 50);
+    };
+
     handleResize();
     window.addEventListener("resize", handleResize);
+    window.addEventListener("scroll", handleScroll);
+    
     return () => {
       window.removeEventListener("resize", handleResize);
+      window.removeEventListener("scroll", handleScroll);
     };
   }, []);
 
   return (
     <nav
-      className="fixed w-full left-0 z-40 transition-all duration-150 top-0"
+      className={`fixed w-full left-0 z-40 transition-all duration-150 top-0 ${isScrolled ? "shadow-md bg-white" : ""}`}
       style={{
         backgroundColor: "var(--background-color)",
         height: "80px",
@@ -43,9 +51,21 @@ const Navbar: React.FC<NavBarProps> = ({ links, isOpen, toggle }) => {
           {/* Logo, Title, and Phone Number */}
           <div className="ml-6 flex items-center gap-4">
             <Link href="/">
-              <div className="flex items-center gap-3">
-                <Image src="/logo_transparent.jpg" alt="Logo" width={80} height={80} />
-                <span className="text-lg font-bold" style={{ color: "var(--primary-color)" }}>
+              <div className="flex items-center gap-3 transition-all duration-300">
+                <Image
+                  src="/logo_transparent.jpg"
+                  alt="Logo"
+                  width={isScrolled ? 80 : 120} // Bigger at first, normal when scrolled
+                  height={isScrolled ? 80 : 120}
+                  className="transition-all duration-300"
+                />
+                <span
+                  className="text-lg font-bold transition-all duration-300"
+                  style={{
+                    color: "var(--primary-color)",
+                    fontSize: isScrolled ? "1rem" : "1.25rem",
+                  }}
+                >
                   {title}
                 </span>
               </div>
