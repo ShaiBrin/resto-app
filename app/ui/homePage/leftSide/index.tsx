@@ -33,6 +33,4 @@ const LeftSide: React.FC<LeftSideProps> = React.memo(({ setSelectedCategory }) =
   );
 });
 
-LeftSide.displayName = 'LeftSide';
-
 export default LeftSide;

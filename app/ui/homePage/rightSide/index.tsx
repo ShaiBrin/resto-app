@@ -37,6 +37,5 @@ const RightSide = React.memo(({ selectedCategory }: RightSideProps) => {
   );
 });
 
-RightSide.displayName = 'RightSide';
 
 export default RightSide;
