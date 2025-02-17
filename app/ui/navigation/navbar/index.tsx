@@ -1,4 +1,7 @@
 import React, { useState, useEffect } from "react";
+import WhatshotIcon from '@mui/icons-material/Whatshot';
+import ShoppingCartIcon from '@mui/icons-material/ShoppingCart';
+
 import Link from "next/link";
 import Image from "next/image";
 import MenuIcon from "@mui/icons-material/Menu";
@@ -50,11 +53,37 @@ const Navbar: React.FC<NavBarProps> = ({ links, isOpen, toggle }) => {
           </div>
 
           {/* Nav Links (Desktop) */}
-          <ul className="hidden md:flex w-full items-center">
+          <ul className="pt-2 hidden md:flex w-full items-center">
             <div className="flex justify-center w-full gap-x-16">
-              {links.mainlinks.map((link) => (
-                <NavItem key={link} link={link} />
-              ))}
+              {links.mainlinks.map((link) => {
+                if (link === "/specials") {
+                  return (
+                    <li key={link} className="text-red-500 text-xl font-extrabold">
+                      <Link href={link}>
+                        <div className="flex items-center gap-x-2">
+                          <WhatshotIcon style={{ color: "red", fontSize: "2rem" }} />
+                          <p className="cursor-pointer text-red-500 text-xl font-extrabold">
+                            Specials
+                          </p>
+                        </div>
+                      </Link>
+                    </li>
+                  );
+                } else if (link === "/order") {
+                  return (
+                    <li key={link}>
+                      <Link href={link}>
+                        <button className="bg-red-500 text-white px-4 py-2 rounded-lg flex items-center gap-x-2 hover:bg-red-600 transition duration-300">
+                          <ShoppingCartIcon style={{ fontSize: "1.5rem" }} />
+                          ORDER
+                        </button>
+                      </Link>
+                    </li>
+                  );
+                } else {
+                  return <NavItem key={link} link={link} />;
+                }
+              })}
             </div>
           </ul>
 

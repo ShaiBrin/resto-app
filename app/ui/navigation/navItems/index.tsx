@@ -1,6 +1,6 @@
 import LocalDiningIcon from '@mui/icons-material/LocalDining';
 import DinnerDiningIcon from '@mui/icons-material/DinnerDining';
-import LocalShippingIcon from '@mui/icons-material/LocalShipping';
+import LocationOnIcon from '@mui/icons-material/LocationOn';
 import Link from "next/link";
 import { usePathname } from "next/navigation";
 
@@ -21,8 +21,8 @@ const NavItem: React.FC<NavLinkProps> = ({ link, toggle, scrollToMenu }) => {
         return <LocalDiningIcon style={{ color: pathname === link ? "orange" : "inherit" }} />;
       case "/catering":
         return <DinnerDiningIcon style={{ color: pathname === link ? "blue" : "inherit" }} />;
-      case "/order":
-        return <LocalShippingIcon style={{ color: pathname === link ? "gray" : "inherit" }} />;
+      case "/location":
+        return <LocationOnIcon style={{ color: pathname === link ? "blue" : "inherit" }} />;  
       default:
         return null;
     }
@@ -38,7 +38,7 @@ const NavItem: React.FC<NavLinkProps> = ({ link, toggle, scrollToMenu }) => {
   };
 
   return (
-    <li className={link === "/location" ? "ml-auto" : ""}>
+    <li className = "ml-auto" >
       <Link href={link} onClick={handleClick}>
         <div className="flex items-center gap-x-2">
           {/* Render the icon with the correct color */}
