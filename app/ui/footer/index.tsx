@@ -1,7 +1,7 @@
 import React from "react";
 import { BottomNavigation, BottomNavigationAction } from "@mui/material";
 import Link from "next/link";
-import { Facebook, Twitter, Instagram } from "@mui/icons-material";
+import { Facebook, X, Instagram } from "@mui/icons-material";
 
 const Footer = () => {
   return (
@@ -13,11 +13,11 @@ const Footer = () => {
           <a href="https://facebook.com" target="_blank" rel="noopener noreferrer">
             <Facebook fontSize="large" className="hover:text-blue-500" />
           </a>
-          <a href="https://twitter.com" target="_blank" rel="noopener noreferrer">
-            <Twitter fontSize="large" className="hover:text-blue-400" />
-          </a>
           <a href="https://instagram.com" target="_blank" rel="noopener noreferrer">
             <Instagram fontSize="large" className="hover:text-pink-500" />
+          </a>
+          <a href="https://twitter.com" target="_blank" rel="noopener noreferrer">
+            <X fontSize="large" className="hover:text-blue-400" />
           </a>
         </div>
 
