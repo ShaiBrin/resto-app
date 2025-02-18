@@ -17,7 +17,6 @@ export default function Home() {
         <LeftSide setSelectedCategory={setSelectedCategory} />
         <RightSide selectedCategory={selectedCategory} />
       </div>
-      <Footer />
     </div>
   );
 }

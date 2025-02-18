@@ -1,7 +1,7 @@
 "use client";
 import { useState } from "react";
-import links from "../../../data/links.json"
 import {  Links } from "@/app/types/";
+import links from "@/data/links.json"
 import Navbar from "./navbar";
 
 const Navigation = () => {
@@ -12,7 +12,7 @@ const Navigation = () => {
   };
   return (
     <>
-      <Navbar links={links as unknown as Links} isOpen={isOpen} toggle={toggle} />
+      <Navbar links={links as Links} isOpen={isOpen} toggle={toggle} />
     </>
   );
 };

@@ -12,17 +12,19 @@ interface NavLinkProps {
 
 const NavItem: React.FC<NavLinkProps> = ({ link, toggle, scrollToMenu }) => {
   const pathname = usePathname();
-  const text = link.replace("/", "").charAt(0).toUpperCase() + link.slice(2);
+  const text =
+    link === "/location"
+      ? "Hours & Location"
+      : link.replace("/", "").charAt(0).toUpperCase() + link.slice(2);
 
-  // Function to get the appropriate icon with color based on the pathname
   const getIcon = (link: string) => {
     switch (link) {
       case "/menu":
         return <LocalDiningIcon style={{ color: pathname === link ? "orange" : "inherit" }} />;
       case "/catering":
-        return <DinnerDiningIcon style={{ color: pathname === link ? "blue" : "inherit" }} />;
+        return <DinnerDiningIcon style={{ color: pathname === link ? "orange" : "inherit" }} />;
       case "/location":
-        return <LocationOnIcon style={{ color: pathname === link ? "blue" : "inherit" }} />;  
+        return <LocationOnIcon style={{ color: pathname === link ? "orange" : "inherit" }} />;
       default:
         return null;
     }
@@ -30,22 +32,22 @@ const NavItem: React.FC<NavLinkProps> = ({ link, toggle, scrollToMenu }) => {
 
   const handleClick = () => {
     if (link === "/menu" && scrollToMenu) {
-      scrollToMenu(); // Call the scrollToMenu function when the "Menu" link is clicked
+      scrollToMenu();
     }
     if (toggle) {
-      toggle(); // Toggle the navigation menu if provided
+      toggle();
     }
   };
 
   return (
-    <li className = "ml-auto" >
+    <li className="ml-auto">
       <Link href={link} onClick={handleClick}>
         <div className="flex items-center gap-x-2">
-          {/* Render the icon with the correct color */}
           {getIcon(link)}
           <p
+            style={{ fontSize: "15px", fontWeight: "bold" }}
             className={`cursor-pointer transition duration-200 ${
-              pathname === link ? "text-black font-bold" : "hover:text-red"
+              pathname === link ? "font-bold" : "hover:text-red"
             }`}
           >
             {text}
@@ -55,5 +57,6 @@ const NavItem: React.FC<NavLinkProps> = ({ link, toggle, scrollToMenu }) => {
     </li>
   );
 };
+
 
 export default NavItem;

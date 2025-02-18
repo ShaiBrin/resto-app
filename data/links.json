@@ -1,4 +1,5 @@
 {
     "mainlinks": ["/","/specials","/menu","/catering","/location","/order"],
-    "footerLinks": ["/about","/faqs","/contact"]
+    "footerLinks": ["/gallery","/about","/location","/contact","/signup"],
+    "socialLinks": ["https://facebook.com","https://instagram.com","https://twitter.com"]
 }
