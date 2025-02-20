@@ -31,7 +31,7 @@ const Footer = () => {
         <div className="flex gap-6 text-sm font-semibold">
           {links.footerLinks.map((footerLink, index) => (
             footerLink === "/signup" ? (
-              <div className="pb-2">
+              <div key={footerLink || index} className="pb-2"> {/* Add key here */}
               <Link 
                 key={footerLink} // Unique key for each element
                 href={footerLink} 
