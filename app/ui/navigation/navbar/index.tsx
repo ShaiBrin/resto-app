@@ -49,7 +49,7 @@ const Navbar: React.FC<NavBarProps> = ({ links, isOpen, toggle }) => {
       <div className="w-full h-full text-black font-sans">
         <div className="w-full px-6 h-full flex justify-between items-center">
           {/* Logo, Title, and Phone Number */}
-          <div className="ml-6 flex items-center gap-4">
+          <div className="flex items-center gap-4">
             <Link href="/">
               <div className="flex items-center gap-3 transition-all duration-300">
                 <Image

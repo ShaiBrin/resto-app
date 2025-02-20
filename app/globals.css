@@ -4,7 +4,7 @@
 
 /* Global styles */
 :root {
-  --primary-color: #FFD700;  /* Earthy Red */
+  --primary-color: #F5F5DC;  /* Earthy Red */
   --secondary-color: #5C4033; /* Deep Brown */
   --accent-color: #F9A602;  /* Golden Yellow */
   --background-color: #3e2723; /* Creamy Off-White */
@@ -13,7 +13,7 @@
 }
 
 body {
-  font-family: 'Roboto Slab', serif;
+  font-family: 'Veneer', serif;
   background-color: var(--background-color);
   background-image: url('/wooden-bg3.jpg');
   color: var(--text-color);
@@ -24,7 +24,7 @@ body {
 
 
 h1, h2, h3, h4 {
-  font-family: 'Bebas Neue', sans-serif;
+  font-family: 'Veneer', sans-serif;
   color: var(--primary-color);
 }
 

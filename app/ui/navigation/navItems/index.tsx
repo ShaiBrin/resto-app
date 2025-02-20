@@ -40,7 +40,7 @@ const NavItem: React.FC<NavLinkProps> = ({ link, toggle, scrollToMenu }) => {
   };
 
   return (
-    <li className="ml-auto">
+    <li>
       <Link href={link} onClick={handleClick}>
         <div className="flex items-center gap-x-2">
           {getIcon(link)}
