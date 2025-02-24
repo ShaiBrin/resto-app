@@ -17,9 +17,10 @@ const RightSide = React.memo(({ selectedCategory }: RightSideProps) => {
           selectedItems.map((item, index) => (
             <li key={index} className="p-4">
               <div className="flex justify-between items-center">
-                <h3 className="text-2xl pb-2 font-bold text-primary px-2 py-1 ">
+                <h3 className="text-2xl pb-2 font-bold text-primary px-2 py-1">
                   {item.name}
                 </h3>
+                <span className="flex-1 border-t border-dashed border-primary mx-2 self-center" />
                 <p className="text-m font-semibold text-white px-2 py-1 rounded mt-2">
                   ${item.price}
                 </p>
