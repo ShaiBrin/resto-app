@@ -7,7 +7,7 @@ import { usePathname } from "next/navigation";
 interface NavLinkProps {
   link: string;
   toggle?: () => void;
-  scrollToMenu?: () => void; 
+  scrollToMenu?: () => void;
 }
 
 const NavItem: React.FC<NavLinkProps> = ({ link, toggle, scrollToMenu }) => {
@@ -42,12 +42,12 @@ const NavItem: React.FC<NavLinkProps> = ({ link, toggle, scrollToMenu }) => {
   return (
     <li>
       <Link href={link} onClick={handleClick}>
-        <div className="flex items-center gap-x-2">
+        <div className="flex flex-col items-center gap-y-2">
           {getIcon(link)}
           <p
             style={{ fontSize: "15px", fontWeight: "bold" }}
             className={`cursor-pointer transition duration-200 ${
-              pathname === link ? "font-bold" : "hover:text-red"
+              pathname === link ? "font-bold" : "hover:text-red-500"
             }`}
           >
             {text}
@@ -57,6 +57,5 @@ const NavItem: React.FC<NavLinkProps> = ({ link, toggle, scrollToMenu }) => {
     </li>
   );
 };
-
 
 export default NavItem;

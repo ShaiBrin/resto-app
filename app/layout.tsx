@@ -16,14 +16,14 @@ export default function RootLayout({
   return (
     <html lang="en">
       <body>
-        <div className="w-full pl-5">
-          <Navigation/>
-        </div>
-        <div> 
-          {children}
+        <div className="w-full">
+          <Navigation />
         </div>
         <div>
-          <Footer/>
+          {children}
+        </div>
+        <div className="pt-10 px-4 md:px-0 hidden md:block">
+          <Footer />
         </div>
       </body>
     </html>

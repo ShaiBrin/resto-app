@@ -13,7 +13,9 @@ export default function Home() {
       {/* Newsletter Popup */}
       {/* <NewsletterPopup /> */}
 
-      <VideoContent src={"/homeVid.mp4"} description={SITE_TITLE} />
+      <div className="pt-20">
+        <VideoContent src={"/homeVid.mp4"} description={SITE_TITLE} />
+      </div>
 
       <div className="w-full flex flex-col md:flex-row justify-center items-center p-10">
         <FeatureBox 

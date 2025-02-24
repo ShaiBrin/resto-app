@@ -16,15 +16,16 @@ const RightSide = React.memo(({ selectedCategory }: RightSideProps) => {
         {selectedItems.length > 0 ? (
           selectedItems.map((item, index) => (
             <li key={index} className="p-4">
-              <div className="flex justify-between bg-yellow-400 items-center">
-                <h3 className="text-lg pb-2 font-semibold text-black px-2 py-1 underline">
+              <div className="flex justify-between items-center">
+                <h3 className="text-2xl pb-2 font-bold text-primary px-2 py-1">
                   {item.name}
                 </h3>
-                <p className="text-lg font-semibold text-black px-2 py-1 rounded mt-2">
+                <span className="flex-1 border-t border-dashed border-primary mx-2 self-center" />
+                <p className="text-m font-semibold text-white px-2 py-1 rounded mt-2">
                   ${item.price}
                 </p>
               </div>
-              <p className="bg-yellow-400 text-black px-2 py-1 text-xl">
+              <p className="italic text-white px-2 py-1 text-xl">
                 {item.description}
               </p>
             </li>
@@ -36,6 +37,5 @@ const RightSide = React.memo(({ selectedCategory }: RightSideProps) => {
     </div>
   );
 });
-
 
 export default RightSide;
