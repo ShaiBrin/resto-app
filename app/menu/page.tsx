@@ -38,13 +38,28 @@ export default function Menu() {
 
         {/* Mobile Layout */}
         {isMobile && (
-          <div className="px-4 py-8">
-            {/* Mobile Navbar */}
+          <div className="px-4 py-8 bg-[url('/bbq-bg-mobile.jpeg')]">
+            {/* First Mobile Navbar (Categories 0-3) */}
             <div className="flex flex-nowrap gap-2 overflow-x-auto whitespace-nowrap pb-4">
-              {menuData.categories.map((category, index) => (
+              {menuData.categories.slice(0, 4).map((category, index) => (
                 <button
                   key={index}
                   className={`text-lg font-semibold text-white px-3 py-1 rounded shrink-0 border-2 border-transparent bg-transparent ${
+                    selectedCategory === category.type ? 'selected-category' : ''
+                  }`}
+                  onClick={() => setSelectedCategory(category.type)}
+                >
+                  {category.type}
+                </button>
+              ))}
+            </div>
+
+            {/* Second Mobile Navbar (Categories after index 3) */}
+            <div className="flex flex-nowrap gap-2 overflow-x-auto whitespace-nowrap pb-4">
+              {menuData.categories.slice(4).map((category, index) => (
+                <button
+                  key={index}
+                  className={`text-base font-semibold text-white px-3 py-1 rounded shrink-0 border-2 border-transparent bg-transparent ${
                     selectedCategory === category.type ? 'selected-category' : ''
                   }`}
                   onClick={() => setSelectedCategory(category.type)}
