@@ -1,7 +1,6 @@
 import React, { useState, useEffect } from "react";
 import WhatshotIcon from '@mui/icons-material/Whatshot';
 import ShoppingCartIcon from '@mui/icons-material/ShoppingCart';
-
 import Link from "next/link";
 import Image from "next/image";
 import MenuIcon from "@mui/icons-material/Menu";
@@ -17,7 +16,7 @@ interface NavBarProps {
 const Navbar: React.FC<NavBarProps> = ({ links, isOpen, toggle }) => {
   const [isMobile, setIsMobile] = useState(false);
   const [isScrolled, setIsScrolled] = useState(false);
-  const title = "JAGY's SMOKEHOUSE BBQ & GRILLADE";
+  const title = "JAGY'S SMOKEHOUSE";
 
   useEffect(() => {
     const handleResize = () => {
@@ -47,8 +46,8 @@ const Navbar: React.FC<NavBarProps> = ({ links, isOpen, toggle }) => {
       }}
     >
       <div className="w-full h-full text-black font-sans">
-        <div className="w-full px-6 h-full flex justify-between items-center">
-          {/* Logo, Title, and Phone Number */}
+      <div className="h-full flex items-center justify-between gap-4">
+        {/* Logo, Title, and Phone Number */}
           <div className="flex items-center gap-4">
             <Link href="/">
               <div className="flex items-center gap-3 transition-all duration-300">
@@ -74,41 +73,42 @@ const Navbar: React.FC<NavBarProps> = ({ links, isOpen, toggle }) => {
 
           {/* Nav Links (Desktop) */}
           <ul className="pt-2 hidden md:flex w-full items-center">
-          <div className="flex justify-center w-full gap-x-16">
-            {links.mainlinks.map((link) => {
-              if (link === "/specials") {
-                return (
-                  <li key={link} className="text-red-500 text-lg font-extrabold">
-                    <Link href={link}>
-                      <div className="flex items-center gap-x-2">
-                        <WhatshotIcon style={{ color: "red", fontSize: "2rem" }} />
-                        <p className="cursor-pointer text-red-500 text-xl font-extrabold">Specials</p>
-                      </div>
-                    </Link>
-                  </li>
-                );
-              } else if (link === "/order") {
-                return (
-                  <li key={link}>
-                    <Link href={link}>
-                      <button className="bg-red-500 text-white px-4 py-2 rounded-lg flex items-center gap-x-2 hover:bg-red-600 transition duration-300">
-                        <ShoppingCartIcon style={{ fontSize: "1.5rem" }} />
-                        ORDER
-                      </button>
-                    </Link>
-                  </li>
-                );
-              } else {
-                return <NavItem key={link} link={link} />;
-              }
-            })}
-          </div>
+            <div className="flex justify-center w-full gap-x-16">
+              {links.mainlinks.map((link) => {
+                if (link === "/specials") {
+                  return (
+                    <li key={link} className="text-red-500 text-lg font-extrabold">
+                      <Link href={link}>
+                        <div className="flex items-center gap-x-2">
+                          <WhatshotIcon style={{ color: "red", fontSize: "2rem" }} />
+                          <p className="cursor-pointer text-red-500 text-xl font-extrabold">Specials</p>
+                        </div>
+                      </Link>
+                    </li>
+                  );
+                } else if (link === "/order") {
+                  return (
+                    <li key={link}>
+                      <Link href={link}>
+                        <button className="bg-red-500 text-white px-4 py-2 rounded-lg flex items-center gap-x-2 hover:bg-red-600 transition duration-300">
+                          <ShoppingCartIcon style={{ fontSize: "1.5rem" }} />
+                          ORDER
+                        </button>
+                      </Link>
+                    </li>
+                  );
+                } else {
+                  return <NavItem key={link} link={link} />;
+                }
+              })}
+            </div>
           </ul>
           {/* Hamburger Menu (Mobile) */}
           {isMobile && (
             <MenuIcon
               className="md:hidden cursor-pointer text-gray-600"
               fontSize="large"
+              style={{ fontSize: "2.5rem" }} 
               onClick={toggle}
             />
           )}
