@@ -7,15 +7,15 @@
   --primary-color: #F5F5DC;  /* Earthy Red */
   --secondary-color: #5C4033; /* Deep Brown */
   --accent-color: #F9A602;  /* Golden Yellow */
-  --background-color: #3e2723; /* Creamy Off-White */
-  --text-color: #333333;  /* Charcoal Gray */
+  --background-color: #171313; /* Creamy Off-White */
+  --text-color: #1c1c1c;  /* Charcoal Gray */
   --wood-color: #C49A6C; /* Wood Tone */
 }
 
 body {
   font-family: 'Veneer', serif;
   background-color: var(--background-color);
-  background-image: url('/wooden-bg3.jpg');
+  background-image: url('/wooden-bg3.jpg'); 
   color: var(--text-color);
   margin: 0;
   padding: 0;
@@ -29,7 +29,7 @@ h1, h2, h3, h4 {
 }
 
 p, a, li {
-  font-family: 'Lora', serif;
+  font-family: 'Oswald', sans-serif;
 }
 
 a {
