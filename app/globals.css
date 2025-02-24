@@ -162,3 +162,31 @@ footer p {
   background-color: transparent !important;
   transition: border 0.3s ease;
 }
+
+/* Custom underline effect for NavItem */
+.custom-underline {
+  position: relative;
+}
+
+.custom-underline::after {
+  content: '';
+  position: absolute;
+  width: 0;
+  height: 2px;
+  bottom: -4px; /* Offset below text */
+  left: 0;
+  background-color: white; /* Matches text-white */
+  transition: width 0.2s ease-in-out; /* Smooth left-to-right transition */
+}
+
+.custom-underline:hover::after {
+  width: 100%; /* Expands from left to right on hover */
+}
+
+.custom-underline.active-underline::after {
+  width: 100%; /* Fully underlined when active */
+}
+
+nav li a:hover {
+  color: inherit !important; /* Prevents color change on hover */
+}

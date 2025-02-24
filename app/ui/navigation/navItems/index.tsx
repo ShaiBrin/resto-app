@@ -20,11 +20,11 @@ const NavItem: React.FC<NavLinkProps> = ({ link, toggle, scrollToMenu }) => {
   const getIcon = (link: string) => {
     switch (link) {
       case "/menu":
-        return <LocalDiningIcon style={{ color: pathname === link ? "orange" : "inherit" }} />;
+        return <LocalDiningIcon className={pathname === link ? "text-orange-500" : "text-white md:hover:text-yellow-500"} />;
       case "/catering":
-        return <DinnerDiningIcon style={{ color: pathname === link ? "orange" : "inherit" }} />;
+        return <DinnerDiningIcon className={pathname === link ? "text-orange-500" : "text-white md:hover:text-yellow-500"} />;
       case "/location":
-        return <LocationOnIcon style={{ color: pathname === link ? "orange" : "inherit" }} />;
+        return <LocationOnIcon className={pathname === link ? "text-orange-500" : "text-white md:hover:text-yellow-500"} />;
       default:
         return null;
     }
@@ -42,12 +42,12 @@ const NavItem: React.FC<NavLinkProps> = ({ link, toggle, scrollToMenu }) => {
   return (
     <li>
       <Link href={link} onClick={handleClick}>
-        <div className="flex flex-col items-center gap-y-2">
+        <div className="flex items-center gap-x-2">
           {getIcon(link)}
           <p
             style={{ fontSize: "15px", fontWeight: "bold" }}
-            className={`cursor-pointer transition duration-200 ${
-              pathname === link ? "font-bold" : "hover:text-red-500"
+            className={`cursor-pointer relative text-white transition-all duration-200 custom-underline ${
+              pathname === link ? "active-underline" : ""
             }`}
           >
             {text}

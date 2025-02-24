@@ -5,7 +5,7 @@ import Link from "next/link";
 import Image from "next/image";
 import MenuIcon from "@mui/icons-material/Menu";
 import CloseIcon from '@mui/icons-material/Close';
-import Grid from '@mui/material/Grid2'; // Import Grid from MUI
+import Grid from '@mui/material/Grid2';
 import { Links } from "@/app/types";
 import NavItem from "../navItems";
 
@@ -109,7 +109,7 @@ const Navbar: React.FC<NavBarProps> = ({ links, isOpen, toggle }) => {
           {/* Mobile Toggle Button */}
           {isMobile && (
             <MenuIcon
-              className="md:hidden cursor-pointer text-gray-600"
+              className="md:hidden cursor-pointer text-gray-600 pl-4"
               fontSize="large"
               style={{ fontSize: "2.5rem" }}
               onClick={toggle}
