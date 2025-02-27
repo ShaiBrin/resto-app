@@ -5,18 +5,17 @@ import Link from "next/link";
 import links from "@/data/links.json";
 
 const getSocialIcon = (url: string) => {
-  if (url.includes("facebook")) return <Facebook fontSize="large" className="hover:text-blue-500" />;
-  if (url.includes("instagram")) return <Instagram fontSize="large" className="hover:text-pink-500" />;
-  if (url.includes("twitter")) return <X fontSize="large" className="hover:text-black" />;
+  if (url.includes("facebook")) return <Facebook fontSize="large" className="text-[var(--primary-color)] hover:text-blue-500" />;
+  if (url.includes("instagram")) return <Instagram fontSize="large" className="text-[var(--primary-color)] hover:text-pink-500" />;
+  if (url.includes("twitter")) return <X fontSize="large" className="text-[var(--primary-color)] hover:text-black" />;
   return null; // No icon if no match
 };
 
 const Footer = () => {
   return (
-    <div className="text-black py-1 px-6">
-      {/* Top Row: Social Media on the left, Links on the right */}
-      <div className="flex justify-between items-center">
-        
+    <div className="text-[var(--primary-color)] py-1 px-6">
+      {/* Desktop Layout: Socials on Left, Links on Right */}
+      <div className="hidden md:flex justify-between items-center">
         {/* Left Side - Social Media Links */}
         <div className="flex gap-4">
           {links.socialLinks.map((socialLink) => (
@@ -27,23 +26,21 @@ const Footer = () => {
         </div>
 
         {/* Right Side - Footer Links */}
-        
         <div className="flex gap-6 text-sm font-semibold">
-          {links.footerLinks.map((footerLink, index) => (
+          {links.footerLinks.map((footerLink) => (
             footerLink === "/signup" ? (
-              <div key={footerLink || index} className="pb-2"> {/* Add key here */}
-              <Link 
-                key={footerLink} // Unique key for each element
-                href={footerLink} 
-                className="border-4 border-black px-3 py-1 rounded font-bold hover:bg-yellow-400 hover:text-black transition duration-300"
-              >
-                Email & Signup
-              </Link>
+              <div key={footerLink} className="pb-2">
+                <Link
+                  href={footerLink}
+                  className="border-4 border-[var(--text-color)] px-3 py-1 rounded font-bold hover:bg-yellow-400 hover:text-[var(--text-color)] transition duration-300"
+                >
+                  Email & Signup
+                </Link>
               </div>
             ) : (
-              <Link 
-                key={footerLink || index} // Ensure a unique key
-                href={footerLink} 
+              <Link
+                key={footerLink}
+                href={footerLink}
                 className="hover:underline"
               >
                 {footerLink.replace("/", "").charAt(0).toUpperCase() + footerLink.slice(2)}
@@ -52,12 +49,38 @@ const Footer = () => {
           ))}
         </div>
       </div>
-      {/* Bottom Row: Copyright Name */}
+
+      {/* Mobile Layout: Two BottomNavigation Bars */}
+      <div className="md:hidden">
+        {/* Navbar 1: Footer Links */}
+        <BottomNavigation
+          sx={{ backgroundColor: "transparent", boxShadow: "none" }}
+          className="flex justify-center"
+        >
+          {links.socialLinks.map((socialLink) => (
+            <BottomNavigationAction
+              key={socialLink}
+              icon={getSocialIcon(socialLink)}
+              component="a"
+              href={socialLink}
+              target="_blank"
+              rel="noopener noreferrer"
+              sx={{
+                "& .MuiSvgIcon-root": {
+                  color: "var(--primary-color)", // Apply to icons
+                },
+              }}
+            />
+          ))}
+        </BottomNavigation>
+      </div>
+
+      {/* Copyright (Both Screens) */}
       <BottomNavigation sx={{ backgroundColor: "transparent", boxShadow: "none" }}>
         <BottomNavigationAction
           label="Ishraq Shabab"
           icon={
-            <div className="text-black font-semibold text-sm">
+            <div className="text-[var(--primary-color)] font-semibold text-sm">
               © Ishraq Shabab
             </div>
           }

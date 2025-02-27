@@ -19,10 +19,8 @@ export default function RootLayout({
         <div className="w-full">
           <Navigation />
         </div>
-        <div>
-          {children}
-        </div>
-        <div className="pt-10 px-4 md:px-0 hidden md:block">
+        <div>{children}</div>
+        <div className="pt-10 px-4 md:px-0">
           <Footer />
         </div>
       </body>
