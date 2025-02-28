@@ -92,9 +92,9 @@ const Navbar: React.FC<NavBarProps> = ({ links, isOpen, toggle }) => {
                   return (
                     <li key={link}>
                       <Link href={link}>
-                        <button className="bg-red-500 text-white px-4 py-2 rounded-lg flex items-center gap-x-2 hover:bg-red-600 transition duration-300">
+                        <button className="bg-red-500 text-white px-2 py-2 rounded-lg flex items-center gap-x-2 hover:bg-red-600 transition duration-300">
                           <ShoppingCartIcon style={{ fontSize: "1.5rem" }} />
-                          ORDER
+                          ORDER ONLINE
                         </button>
                       </Link>
                     </li>
@@ -144,7 +144,7 @@ const Navbar: React.FC<NavBarProps> = ({ links, isOpen, toggle }) => {
                       <Link href={link} onClick={toggle}>
                         <button className="bg-red-500 text-white px-4 py-2 rounded-lg flex flex-col items-center gap-y-2 hover:bg-red-600 transition duration-300">
                           <ShoppingCartIcon style={{ fontSize: "1.5rem" }} />
-                          <span>ORDER</span>
+                          <span>ORDER ONLINE</span>
                         </button>
                       </Link>
                     ) : (
