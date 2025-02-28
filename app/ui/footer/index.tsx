@@ -3,6 +3,7 @@ import { BottomNavigation, BottomNavigationAction } from "@mui/material";
 import { Facebook, X, Instagram } from "@mui/icons-material";
 import Link from "next/link";
 import links from "@/data/links.json";
+import Image from "next/image";
 
 const getSocialIcon = (url: string) => {
   if (url.includes("facebook")) return <Facebook fontSize="large" className="text-[var(--primary-color)] hover:text-blue-500" />;
@@ -52,7 +53,22 @@ const Footer = () => {
 
       {/* Mobile Layout: Two BottomNavigation Bars */}
       <div className="md:hidden">
-        {/* Navbar 1: Footer Links */}
+        {/* Logo Above Social Links */}
+        <div className="flex justify-center mb-1">
+          <Link href="/">
+            <div className="flex items-center transition-all duration-300">
+              <Image
+                src="/logo_transparent.jpg"
+                alt="Logo"
+                width={120}
+                height={120}
+                className="transition-all duration-300"
+              />
+            </div>
+          </Link>
+        </div>
+
+        {/* Navbar 1: Social Links */}
         <BottomNavigation
           sx={{ backgroundColor: "transparent", boxShadow: "none" }}
           className="flex justify-center"
@@ -74,6 +90,7 @@ const Footer = () => {
           ))}
         </BottomNavigation>
       </div>
+
 
       {/* Copyright (Both Screens) */}
       <BottomNavigation sx={{ backgroundColor: "transparent", boxShadow: "none" }}>
