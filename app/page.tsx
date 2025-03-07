@@ -4,6 +4,7 @@ import NewsletterPopup from './ui/homePage/pop';
 import { SITE_TITLE } from './constants';
 import FeatureBox from "./ui/homePage/features";
 import Link from "next/link";
+import FourBoxComponent from "./ui/homePage/specialities";
 
 
 export default function Home() {
@@ -15,6 +16,11 @@ export default function Home() {
 
       <div className="pt-20">
         <VideoContent src={"/homeVid.mp4"} description={SITE_TITLE} />
+      </div>
+      <div className="w-full pb-10" style={{ backgroundColor: 'rgba(23, 19, 19, 0.85)' }}>
+      <div >
+          <FourBoxComponent />
+        </div>
       </div>
 
       <div className="w-full flex flex-col md:flex-row justify-center items-center p-10">
