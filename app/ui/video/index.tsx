@@ -1,6 +1,6 @@
 const VideoContent = ({ src, description }: { src: string, description: string }) => {
   return (
-    <div className="relative w-full h-[40vh] md:h-[60vh]"> 
+    <div className="relative w-full h-[80vh] max-sm:h-[50vh] md:h-[80vh]">
       <video
         className="absolute top-0 left-0 w-full h-full object-cover"
         autoPlay
