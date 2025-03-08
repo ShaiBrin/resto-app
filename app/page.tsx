@@ -5,6 +5,7 @@ import { SITE_TITLE } from "./constants";
 import Link from "next/link";
 import FourBoxComponent from "./ui/homePage/specialities";
 import { useState, useEffect } from "react";
+import Carousel from "./ui/homePage/features/carousel";
 
 export default function Home() {
   // State to track the current slide index
@@ -67,44 +68,7 @@ export default function Home() {
       </div>
 
       {/* Carousel */}
-      <div className="w-full p-10">
-        <div className="max-w-4xl mx-auto relative">
-          {/* Carousel Container */}
-          <div className="overflow-hidden">
-            <div
-              className="flex transition-transform duration-500 ease-in-out"
-              style={{ transform: `translateX(-${currentIndex * 100}%)` }}
-            >
-              {features.map((feature, index) => (
-                <div key={index} className="min-w-full flex justify-center">
-                  <div className="w-full max-w-md p-4 rounded-lg shadow-md">
-                    <img
-                      src={feature.image}
-                      alt={feature.title}
-                      className="w-full max-w-22xl h-72 object-cover rounded-md"
-                    />
-                    <h3 className="text-xl font-semibold text-center">{feature.title}</h3>
-                    <p className="text-white text-center mt-2">{feature.description}</p>
-                  </div>
-                </div>
-              ))}
-            </div>
-          </div>
-
-          {/* Dots Navigation */}
-          <div className="flex justify-center mt-4 space-x-2">
-            {features.map((_, index) => (
-              <button
-                key={index}
-                onClick={() => goToSlide(index)}
-                className={`w-3 h-3 rounded-full ${
-                  currentIndex === index ? "bg-black" : "bg-gray-300"
-                }`}
-              />
-            ))}
-          </div>
-        </div>
-      </div>
+      <Carousel/>
 
       {/* Full-Width Line & Button */}
       <div className="w-full flex flex-col items-center mt-6">
